@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inner HTML DOM</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Emmanuel Kipchirchir in 2023</h1>
+        <h2>3O Day of JavaScript</h2>
+        <ul></ul>
+    </div>
+    <script>
+        const list =`
+        <li>30DayOfPython Challenge Done</li>
+               <li>30DayOfPython Challenge comimg</li>
+               <li>30DayOfReact Challenge Done</li>
+               <li>30DayOfC++ Challenge Done</li>
+               <li>30DayOfPython Challenge ongoing</li>`
+    const ul = document.querySelector('ul')
+    ul.innerHTML =list
+    </script>
+</body>
+</html>
+
+//Using innerHTML property can allow us to remove all te children of a parent element.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerHTML DOM</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Emmanuel Kipchirchir in 2023</h1>
+        <h2>3O Day of JavaScript</h2>
+        <ul>
+            <li>30DayOfPython Challenge comimg</li>
+            <li>30DayOfReact Challenge Done</li>
+            <li>30DayOfC++ Challenge Done</li>
+            <li>30DayOfPython Challenge ongoing</li>
+        </ul>
+    </div>
+    <script>
+    const ul = document.querySelector('ul')
+    ul.innerHTML = ''
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!---Creating an element--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let head = document.createElement('h1');
+        head.className = 'head';
+        head.style.fontSize = '24px';
+        head.textContent = 'This is 30 Days JavaScript';
+
+        console.log(head);
+    </script>
+</body>
+</html> 
+
+<!--Creating Elements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        let head
+        for (let i = 0; i < 3; i++) {
+            head = document.createElement('h1')
+            head.className = 'title'
+            head.style.fontSize = '24px'
+            head.textContent = i
+            console.log(head)
+        }
+    </script>
+</body>
+</html>
+
+<!--Appending child to a parent element-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        // creating multiple elements and appending to parent element
+        let head
+        for (let i = 0; i < 3; i++) {
+            head = document.createElement('h1')
+            head.className = 'title'
+            head.style.fontSize = '24px'
+            head.textContent = i
+            document.body.appendChild(head)
+        } //The output on the browser page is 0, 1, 2. Each number will appear as a separate heading (h1) element due to the loop execution. 
+    </script>
+</body>
+</html> 
+
+<!--Removing a child element from a parent node-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <h1>Removing a child element from a parent node</h1>
+    <h2>By Emmanuel Kipchirhcir</h1>
+    <ul>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>Mongo DB</li>
+        <li>CSS</li>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul')
+        const lists = document.querySelectorAll('li')
+        for (const list of lists) {
+            ul.removeChild(list)
+
+        }//the only output in the browser is the h1 and h2.The list has been removed.
+    </script>
+</body>
+
+</html>
+
+<!--Removing a child element from a parent node by using innerHtml-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document Object Model</title>
+</head>
+
+<body>
+    <h1>Removing child Node</h1>
+    <h2>Emmanuel kipchirchir</h1>
+    <ul>
+        <li>HTML</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Python</li>
+        <li>C++</li>
+        <li>Mongo DB</li>
+        <li>CSS</li>
+    </ul>
+
+    <script>
+        const ul2 = document.querySelector('ul')
+        ul.innerHTML = '' //Removes all the elements in the list.
+    </script>
+</body>
+
+</html>

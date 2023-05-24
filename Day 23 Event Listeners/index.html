@@ -1,0 +1,192 @@
+<!--Click-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Event Listeners</title>
+  </head>
+
+  <body>
+    <button>Click Here</button>
+
+    <script>
+      const button = document.querySelector('button')
+      button.addEventListener('click', e => {
+        console.log('e gives the event listener object:', e)
+        console.log('e.target gives the selected element: ', e.target)
+        console.log(
+          'e.target.textContent gives content of selected element: ',
+          e.target.textContent
+        )
+      }) //the output in the browser's console is 'e.target.textContent gives content of selected element: '
+    </script>
+  </body>
+</html>
+
+<!--Onclick-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <button onclick="clickHere()">Click Here</button>
+    <script>
+        const clickHere =() => {
+            alert('We can attach event on HTML element')
+        } //We get an alert on the browser page with the alert information.
+    </script>
+</body>
+</html>
+
+<!--Double Click-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <button>Click Here</button>
+    <script>
+        const button =document.querySelector('button')
+        button.addEventListener('dbclick', e => {
+            console.log('e gives the event listener object:', e)
+            console.log('e.target gives the selected element:', e.target)
+            console.log(
+                'e.target.textContent gives content of selected element: ',
+                e.target.textContent
+            )
+        })
+    </script>
+</body>
+</html>
+
+<!--Mouse enter-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <button>Click Here</button>
+    <script>
+        const button = document.querySelector('button')
+        button.addEventListener('mouseenter', e => {
+            console.log('e gives the listerner object:', e)
+            console.log('e.targe gives the selected element: ', e.target)
+            console.log(
+                'e.target.textContent gives content of selected element: ',
+                e.target.textContent
+            )
+        })//this gives the exxact location of the mouse pointer in the screen. and also when the button is clicked it gives the output on the browser console:e.target.textContent gives content of selected element:  Click Here
+    </script>
+</body>
+</html>
+
+<!--Getting Values from an input element..Input Value-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <h1>Body Mass Index Calculator</h1>
+
+    <input type="text" id ="mass" placeholder="Mass in Kilogram"/>
+    <input type="text" id ="height" placeholder="Height in meters"/>
+    <button>Calculate BMI</button>
+
+    <script>
+        const mass =document.querySelector('#mass')
+        const height =document.querySelector('#height')
+        const button = document.querySelector('button')
+
+        let bmi 
+        button.addEventListener('click', () => {
+            bmi =mass.value / height.value ** 2
+            alert(`your bmi is ${bmi.toFixed(2)}`)
+            console.log(bmi)
+        })
+    </script>
+</body>
+</html>
+
+<!--Input event and change-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <h1>Data Binding  using input or change event</h1>
+    <input type="text" placeholder="type something" />
+    <p></p>
+
+    <script>
+        const input = document.querySelector('input')
+        const p = document.querySelector('p')
+
+        input.addEventListener('input', e => {
+            p.textContent =e.target.value
+        })
+    </script>
+</body>
+</html>
+
+<!--Blur Event-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listeners</title>
+</head>
+<body>
+    <h1>Giving feedback using blur event</h1>
+    <input type="text" id="mass" placeholder="say something" />
+    <p></p>
+    <script>
+        const input =document.querySelector('input')
+        const p =document.querySelector('p')
+        input.addEventListener('blur', (e) => {
+            p.textContent = 'Field is required'
+            p.style.color = 'red'
+        })
+    </script>
+</body>
+</html>
+
+<!--Keypress , keydown and keyup-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body>
+    <h1>Key Events : Press and Key</h1>
+    <script>
+        document.body.addEventListener('keypress', e => {
+            alert(e.keyCode)
+        }) //alerts with a keycode of the letter that it inputed on the keyboard.
+    </script>
+</body>
+</html>
+

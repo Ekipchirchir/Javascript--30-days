@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Weight Calculator</title>
+  <style>
+    img.planet-image {
+      max-width: 150px;
+      height: auto;
+    }
+  </style>
+  <script>
+    // Planet gravitational constants
+    const gravityOnMoon = 1.62;
+    const gravityOnMercury = 3.7;
+    const gravityOnVenus = 8.87;
+    const gravityOnEarth = 9.81;
+    const gravityOnMars = 3.71;
+    const gravityOnJupiter = 24.79;
+    const gravityOnSaturn = 10.44;
+    const gravityOnUranus = 8.69;
+    const gravityOnNeptune = 11.15;
+
+    // Calculate weight on a planet
+    function calculateWeightOnPlanet(weight, planetGravity) {
+      return weight * planetGravity / gravityOnEarth;
+    }
+
+    // Update the planet image based on the selected planet
+    function updatePlanetImage() {
+      const planetSelect = document.getElementById("planet");
+      const selectedPlanet = planetSelect.value;
+      const planetImage = document.getElementById("planetImage");
+      const imagePath = `./images/${selectedPlanet}.png`;
+      planetImage.src = imagePath;
+    }
+
+    function calculate() {
+      const weightOnEarth = parseFloat(document.getElementById("weight").value);
+
+      // Calculate weight on Mars
+      const weightOnMars = calculateWeightOnPlanet(weightOnEarth, gravityOnMars);
+      document.getElementById("weightOnMars").innerHTML = `Weight on Mars: ${weightOnMars.toFixed(2)} kg`;
+      document.getElementById("marsImage").style.display = "block";
+
+      // Calculate weight on the Moon
+      const weightOnMoon = calculateWeightOnPlanet(weightOnEarth, gravityOnMoon);
+      document.getElementById("weightOnMoon").innerHTML = `Weight on the Moon: ${weightOnMoon.toFixed(2)} kg`;
+      document.getElementById("moonImage").style.display = "block";
+
+      //calculate weight on Mercury
+      const weightOnMercury = calculateWeightOnPlanet(weightOnEarth, gravityOnMercury);
+      document.getElementById("weightOnMercury").innerHTML = `Weight on Mercury: ${weightOnMercury.toFixed(2)} kg`;
+      document.getElementById("mercuryImage").style.display = "block";
+
+      //calculate weight on Venus
+      const weightOnVenus = calculateWeightOnPlanet(weightOnEarth, gravityOnVenus);
+      document.getElementById("weightOnVenus").innerHTML = `Weight on Venus: ${weightOnVenus.toFixed(2)} kg`;
+      document.getElementById("venusImage").style.display = "block";
+
+      //calculate weight on Jupiter
+      const weightOnJupiter = calculateWeightOnPlanet(weightOnEarth, gravityOnJupiter);
+      document.getElementById("weightOnJupiter").innerHTML = `Weight on Jupiter: ${weightOnJupiter.toFixed(2)} kg`;
+      document.getElementById("jupiterImage").style.display = "block";
+
+      //calculate weight on Saturn
+      const weightOnSaturn = calculateWeightOnPlanet(weightOnEarth, gravityOnSaturn);
+      document.getElementById("weightOnSaturn").innerHTML = `Weight on Saturn: ${weightOnSaturn.toFixed(2)} kg`;
+      document.getElementById("saturnImage").style.display = "block";
+
+      //calculate weight on Uranus
+      const weightOnUranus = calculateWeightOnPlanet(weightOnEarth, gravityOnUranus);
+      document.getElementById("weightOnUranus").innerHTML = `Weight on Uranus: ${weightOnUranus.toFixed(2)} kg`;
+      document.getElementById("uranusImage").style.display = "block";
+
+      //calculate weight on Neptune.
+      const weightOnNeptune = calculateWeightOnPlanet(weightOnEarth, gravityOnNeptune);
+      document.getElementById("weightOnNeptune").innerHTML = `Weight on Neptune: ${weightOnNeptune.toFixed(2)} kg`;
+      document.getElementById("neptuneImage").style.display = "block";
+
+      updatePlanetImage();
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Weight Calculator</h1>
+  <label for="weight">Enter weight on Earth (kg):</label>
+  <input type="number" id="weight" step="0.5" placeholder="Enter weight">
+  <button onclick="calculate()">Calculate</button>
+
+  <h2>Results:</h2>
+  <div id="weightOnMoon"></div>
+  <img src="./images/moon.png" alt="Moon" id="moonImage" class="planet-image" style="display: none">
+
+  <div id="weightOnMercury"></div>
+  <img src="./images/mercury.png" alt="Mercury" id="mercuryImage" class="planet-image" style="display: none">
+
+  <div id="weightOnVenus"></div>
+  <img src="./images/venus.png" alt="Venus" id="venusImage" class="planet-image" style="display: none">
+
+  <div id="weightOnMars"></div>
+  <img src="./images/mars.png" alt="Mars" id="marsImage" class="planet-image" style="display: none">
+
+  <div id="weightOnJupiter"></div>
+  <img src="./images/jupiter.png" alt="Jupiter" id="jupiterImage" class="planet-image" style="display: none">
+
+  <div id="weightOnSaturn"></div>
+  <img src="./images/saturn.png" alt="Saturn" id="saturnImage" class="planet-image" style="display: none">
+
+  <div id="weightOnUranus"></div>
+  <img src="./images/uranus.png" alt="Uranus" id="uranusImage" class="planet-image" style="display: none">
+
+  <div id="weightOnNeptune"></div>
+  <img src="./images/neptune.png" alt="Neptune" id="neptuneImage" class="planet-image" style="display: none">
+</body>
+
+</html>
+

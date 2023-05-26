@@ -1,0 +1,23 @@
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.chart {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.chart-label {
+    width: 200px;
+    font-weight: bold;
+}
+.chart-bar {
+    width: 200px;
+    height: 20px;
+    background-color: #007bff;
+}
+.chart-value {
+    margin-left: 10px;
+}

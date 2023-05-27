@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World countries data visualization.</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="worldCountriesList.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>World Countries List</h1>
+        <h3>Total Number of Countries: 193</h3>
+
+        <label for="letterInput">Starting Word:</label>
+        <input type="text" id="letterInput" placeholder="Enter letter">
+        <button onclick="searchByLetter()">Search</button>
+
+        <label for="searchInput">Search with Any Word:</label>
+        <input type="text" id="searchInput" placeholder="Enter country name">
+        <button onclick="searchByCountryName()">Search</button>
+    
+        <ul id="countryList" class="country-list"></ul>
+      </div> 
+</body>
+</html>

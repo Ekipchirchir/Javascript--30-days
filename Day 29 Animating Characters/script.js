@@ -1,4 +1,3 @@
-// Wrap every letter in a span
 const textWrapper = document.querySelector('.container');
 textWrapper.innerHTML = textWrapper.textContent.replace();
 

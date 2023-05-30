@@ -1,0 +1,25 @@
+.container {
+    font-weight: 300;
+    font-size: 60px;
+    text-align: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding-top: 220px;
+    color: rgb(53, 19, 19);
+    font-family:'Times New Roman', Times, serif;
+    animation: colorAnimation 2s infinite;
+}
+@keyframes colorAnimation {
+    0% { color: red; }
+    20% { color: blue; }
+    40% { color: green; }
+    60% { color: yellow; }
+    80% { color: orange; }
+    100% { color: rgb(172, 85, 85); }
+}
+body{
+    background-color: rgba(26, 23, 126, 0.679);
+    background-clip: border-box;
+    background-size: 80%;
+    margin: 50px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating Web Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>Validating Web Forms</h1>
+    <div class="container">
+        <form action="submit-form.php" method="POST" onsubmit="return validateForm()">
+          <div class="class">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="class">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div class="class">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="class">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <div class="class">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+          </div>
+          <div class="class">
+            <label for="bio">Bio:</label>
+            <textarea name="bio" id="bio"  required></textarea>
+          </div>
+          <div id="error-container" class="error"></div> 
+          <div class="class">
+            <input type="submit" value="Submit">
+          </div> 
+        </form>
+    </div>
+</body>
+</html>

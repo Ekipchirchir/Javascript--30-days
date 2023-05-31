@@ -8,10 +8,10 @@ anime.timeline({loop: true})
     easing: "easeInOutQuad",
     duration: 2250,
     delay: (el, i) => 150 * (i+1)
-  }).add({
+}).add({
     targets: '.container',
     opacity: 0,
     duration: 1000,
     easing: "easeOutExpo",
     delay: 1000
-  });
+});

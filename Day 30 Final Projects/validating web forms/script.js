@@ -13,13 +13,13 @@ function validateForm(){
 
     const errors = [];
     if (!firstNameRegex.test(firstName)) {
-        errors.push|('First name is valid.');
+        errors.push|('First name is invalid.');
     }
     if (!firstNameRegex.test(lastName)) {
-        errors.push|('Last name is valid.');
+        errors.push|('Last name is invalid.');
     }
     if (!emailRegex.test(email)) {
-        errors.push('Email is valid.');
+        errors.push('Email is invalid.');
     }
     if (!passwordRegex.test(password)) {
         errors.push('Password must be at least 8 characters long and contain at leat one uppercase letter, one lowercase letter, and one digit.');

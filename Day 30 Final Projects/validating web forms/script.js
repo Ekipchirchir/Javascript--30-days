@@ -13,10 +13,10 @@ function validateForm(){
 
     const errors = [];
     if (!firstNameRegex.test(firstName)) {
-        errors.push|('First name is invalid.');
+        errors.push('First name is invalid.');
     }
     if (!firstNameRegex.test(lastName)) {
-        errors.push|('Last name is invalid.');
+        errors.push('Last name is invalid.');
     }
     if (!emailRegex.test(email)) {
         errors.push('Email is invalid.');
